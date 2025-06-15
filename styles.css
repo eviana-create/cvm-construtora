@@ -1,150 +1,251 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-.header {
-  background: #333;
-  color: #fff;
-  padding: 1rem 0;
-}
+    .header {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 1rem 0;
+      position: relative;
+    }
 
-.header h1 {
-  float: left;
-}
+    .header h1 {
+      margin: 0;
+    }
 
-.nav-menu {
-  list-style: none;
-  float: right;
-}
+    nav {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-.nav-menu li {
-  display: inline;
-  margin-left: 20px;
-}
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-}
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-.hero {
+    .nav-menu a:hover {
+      color: #f7c400;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero {
   background: url('construcao.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px 100px; /* top reduzido de 100px para 60px */
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #f7c400;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
 
-.section {
-  padding: 60px 20px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #f7c400;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
 
-.servicos-lista {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  padding: 0;
-}
+    .btn:hover {
+      background: #e0b200;
+    }
+    h2{
+      color: #000;
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    p{
+      color: #000;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .servicos-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .diferenciais {
+      background-color: #f4f4f4;
+      padding: 60px 20px;
+    }
+
+    .diferenciais h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .diferenciais ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .diferenciais li {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .formulario {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-}
-
-.galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-.footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #f7c400;
+  box-shadow: 0 0 8px rgba(247, 196, 0, 0.3);
+  outline: none;
 }
 
-.footer-icons {
-  margin-top: 10px;
+.formulario button {
+  padding: 14px 25px;
+  background-color: #f7c400;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
-.footer-icons a {
-  color: #f7c400;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: transform 0.2s ease;
+.formulario button:hover {
+  background-color: #e0b200;
 }
 
-.footer-icons a:hover {
-  transform: scale(1.2);
-}
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-  text-align: center;
-  transition: background 0.3s;
-}
+    .footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
 
-.whatsapp-float:hover {
-  background-color: #1ebe5b;
-}
+    .footer-icons {
+      margin-top: 10px;
+    }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .nav-menu {
-    float: none;
-    text-align: center;
-  }
+    .footer-icons a {
+      color: #f7c400;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.2s ease;
+    }
 
-  .nav-menu li {
-    display: block;
-    margin: 10px 0;
-  }
+    .footer-icons a:hover {
+      transform: scale(1.2);
+    }
 
-  .header h1 {
-    float: none;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5b;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        background: #1e1e1e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
